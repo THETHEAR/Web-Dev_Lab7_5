@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+        table,td,th,tr{
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
+
+    <script>
+        function addinfo(){
+            var tr = document.createElement("tr");
+
+            var textInput = document.getElementById("name");
+            var name = textInput.value;
+            var td = document.createElement("td");
+            td.innerHTML = name;
+            tr.appendChild(td);
+
+            var textInput2 = document.getElementById("ads");
+            var ads = textInput2.value;
+            var td = document.createElement("td");
+            td.innerHTML = ads;
+            tr.appendChild(td);
+
+            var textInput3 = document.getElementById("tel");
+            var tel = textInput3.value;
+            var td = document.createElement("td");
+            td.innerHTML = tel;
+            tr.appendChild(td);
+            
+            var table = document.getElementById("table")
+            table.append(tr);
+        }
+    </script>
+
+    <form>
+    <label for="name">ชื่อ-สกุล: </label>
+    <input type="text" id="name"><br>
+    
+    <label for="address">ที่อยู่: </label>
+    <input type="text" id="ads"><br>
+
+    <label for="telephone">โทรศัพท์: </label>
+    <input type="text" id="tel"><br>
+
+    <input type="button" value="เพิ่ม" onclick="addinfo()"><br>
+    <br>
+
+</form>
+    <table id="table">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+        <tr id="tr">
+            
+        </tr>
+    </table>
+  </body>
+</html>
